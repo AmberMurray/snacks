@@ -1,0 +1,23 @@
+<!-- Home page -->
+
+<div class="container-fluid col-md-offset-1">
+  <h1>Snack Time</h1>
+  <h3>Let's Eat!</h3>
+  {{#each snacks}}
+  <br>
+  <div class="row">
+    <div class="col-sm-5"><img class="img-size" src="{{image_url}}"></div>
+    <div class="col-sm-5">
+      <h3>Name : <a href="/snacks/{{id}}">{{name}}</a></h3>
+      <p>Review : {{review_description}}</p>
+      <p>Rating : {{rating}}</p>
+      <a href="/snacks/{{this.id}}/edit">
+        <input type="button" name="edit" value="EDIT">
+      </a>
+      <form class="delete" action="/snacks/{{this.id}}?_method=DELETE" method="POST">
+        <input type="submit" name="delete" value="DELETE">
+      </form>
+    </div>
+  </div>
+  {{/each}}
+</div>

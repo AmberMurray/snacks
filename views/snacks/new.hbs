@@ -1,0 +1,25 @@
+<!-- Add new snack form page -->
+
+<div class="container col-md-6 col-md-offset-3">
+  <h1>Add Another Snack</h1>
+  <hr>
+  <form method="POST" action="/snacks" class='well'>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input name="name" type="text" class="form-control" id="name" placeholder="snack name">
+    </div>
+    <div class="form-group">
+      <label for="review_description">Review</label>
+      <textarea name="review_description" class="form-control" id="review_description"rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="rating">Rating</label>
+      <input name="rating" type="text" class="form-control" id="rating" min = "0" max = "10" placeholder="0-10">
+    </div>
+    <div class="form-group">
+      <label for="image_url">Image</label>
+      <input name="image_url" id="image_url" type="text" class="form-control" placeholder='web address'>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+</div>
